@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_6wlLcMgZEeSyMNYR5xypkQ" elementId="ApsiDiscount.application" bindingContexts="_6wlLecgZEeSyMNYR5xypkQ">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="ApsiDiscount.window.main" selectedElement="_6wlLksgZEeSyMNYR5xypkQ" label="ApsiDiscount - BackOffice" width="1000" height="1000">
+    <children xsi:type="basic:PartSashContainer" xmi:id="_6wlLksgZEeSyMNYR5xypkQ" elementId="ApsiDiscount.partsashcontainer.sample" horizontal="true">
+      <children xsi:type="basic:PartStack" xmi:id="_sC61kJKeEem7Ip_w-rJ9Qg" elementId="apsidiscount.partstack.0" containerData="20" accessibilityPhrase="">
+        <children xsi:type="basic:Part" xmi:id="_QeTNgJKfEem7Ip_w-rJ9Qg" elementId="apsidiscount.part.categories" contributionURI="bundleclass://ApsiDiscount/apsidiscount.parts.CategorySearchListPart" label="Categories"/>
+        <children xsi:type="basic:Part" xmi:id="_Qx1NgJKfEem7Ip_w-rJ9Qg" elementId="apsidiscount.part.manufacturers" contributionURI="bundleclass://ApsiDiscount/apsidiscount.parts.ManufacturerSearchListPart" label="Manufacturers"/>
+      </children>
+      <children xsi:type="basic:PartSashContainer" xmi:id="_qg1-0JKeEem7Ip_w-rJ9Qg" elementId="apsidiscount.partsashcontainer.0" containerData="80" selectedElement="_Bg49kJKgEem7Ip_w-rJ9Qg">
+        <children xsi:type="basic:PartStack" xmi:id="_Bg49kJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.partstack.main" selectedElement="_Cc89MJKgEem7Ip_w-rJ9Qg">
+          <children xsi:type="basic:Part" xmi:id="_CJSaUJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.part.home" contributionURI="bundleclass://ApsiDiscount/apsidiscount.parts.HomePart" label="Home"/>
+          <children xsi:type="basic:Part" xmi:id="_Cc89MJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.part.allproducts" contributionURI="bundleclass://ApsiDiscount/apsidiscount.parts.ProductGridPart" label="All products" closeable="true"/>
+        </children>
+      </children>
+      <children xsi:type="basic:Part" xmi:id="_I3t2oJKfEem7Ip_w-rJ9Qg" elementId="apsidiscount.part.alertes" containerData="20" contributionURI="bundleclass://ApsiDiscount/apsidiscount.parts.AlertsPart" label="Alertes" closeable="true"/>
+    </children>
+    <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_6wlLisgZEeSyMNYR5xypkQ" elementId="file" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_dkvC0JKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.connection" label="Connection"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_l-hYQJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.menuseparator.0"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_d6VfYJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.newproduct" label="New Product" command="_dKfHwJZ6EemYxe644s0ubg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_eO5aIJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.newcategory" label="New Category" command="_xbI9gJZ6EemYxe644s0ubg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_ejjbgJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.newmanufacturer" label="New Manufacturer" command="_8vMEoJZ6EemYxe644s0ubg"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_mHBM8JKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.menuseparator.1"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLjcgZEeSyMNYR5xypkQ" elementId="ApsiDiscount.handleditem.quit" label="Quit" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_IesIEJKeEem7Ip_w-rJ9Qg" elementId="apsidiscount.menu.edit" label="Edit">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_rSd-IJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.undo" label="Undo"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_rnoV0JKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.redo" label="Redo"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_5RgE0JKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.menuseparator.2"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_sOp5kJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.cut" label="Cut"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_sjN0UJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.copy" label="Copy"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_s2umMJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.paste" label="Paste"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_WsKTYJKeEem7Ip_w-rJ9Qg" elementId="apsidiscount.menu.alert" label="Alert">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_7r4ckJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.stock" label="Stock"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_8bulIJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.cart" label="Cart"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_04_-EJKhEem7Ip_w-rJ9Qg" elementId="apsidiscount.menuseparator.3"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_EkUc4JKhEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.recent" label="Recent" type="Check"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_Xof_0JKeEem7Ip_w-rJ9Qg" elementId="apsidiscount.menu.view" label="View">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_pibucJKhEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.home" label="Home"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_qD0kQJKhEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.alerts" label="Alerts" type="Check"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_qzWjwJKhEem7Ip_w-rJ9Qg" elementId="apsidiscount.handledmenuitem.closeall" label="Close All"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_6wlLjsgZEeSyMNYR5xypkQ" elementId="help" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLj8gZEeSyMNYR5xypkQ" elementId="ApsiDiscount.handleditem.about" label="About" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_6wlLlcgZEeSyMNYR5xypkQ" elementId="ApsiDiscount.trimbar.top">
+      <children xsi:type="menu:ToolBar" xmi:id="_6wlLlsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLmMgZEeSyMNYR5xypkQ" elementId="ApsiDiscount.handleditem.trimbar.top.save" iconURI="platform:/plugin/ApsiDiscount/icons/save_edit.png" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLl8gZEeSyMNYR5xypkQ" elementId="ApsiDiscount.handleditem.trimbar.top.open" iconURI="platform:/plugin/ApsiDiscount/icons/open_in_app.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_6wlLfcgZEeSyMNYR5xypkQ" elementId="apsidiscount.handler.quitCommand" contributionURI="bundleclass://ApsiDiscount/apsidiscount.handlers.QuitHandler" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLgcgZEeSyMNYR5xypkQ" elementId="apsidiscount.handler.openCommand" contributionURI="bundleclass://ApsiDiscount/apsidiscount.handlers.OpenHandler" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLhMgZEeSyMNYR5xypkQ" elementId="apsidiscount.handler.saveCommand" contributionURI="bundleclass://ApsiDiscount/apsidiscount.handlers.SaveHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLh8gZEeSyMNYR5xypkQ" elementId="apsidiscount.handler.aboutCommand" contributionURI="bundleclass://ApsiDiscount/apsidiscount.handlers.AboutHandler" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_VQcpYJZ6EemYxe644s0ubg" elementId="apsidiscount.handler.newArticle" contributionURI="bundleclass://ApsiDiscount/apsidiscount.handlers.NewArticleHandler" command="_dKfHwJZ6EemYxe644s0ubg"/>
+  <handlers xmi:id="_-2CcYJZ6EemYxe644s0ubg" elementId="apsidiscount.handler.newCategory" contributionURI="bundleclass://ApsiDiscount/apsidiscount.handlers.NewCategoryHandler" command="_xbI9gJZ6EemYxe644s0ubg"/>
+  <handlers xmi:id="_Hs4hQJZ7EemYxe644s0ubg" elementId="apsidiscount.handler.newManufacturer" contributionURI="bundleclass://ApsiDiscount/apsidiscount.handlers.NewManufacturerHandler" command="_8vMEoJZ6EemYxe644s0ubg"/>
+  <bindingTables xmi:id="_6wlLfsgZEeSyMNYR5xypkQ" elementId="ApsiDiscount.bindingtable" bindingContext="_6wlLecgZEeSyMNYR5xypkQ">
+    <bindings xmi:id="_6wlLf8gZEeSyMNYR5xypkQ" elementId="ApsiDiscount.keybinding.m1q" keySequence="M1+Q" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
+    <bindings xmi:id="_6wlLgsgZEeSyMNYR5xypkQ" elementId="ApsiDiscount.keybinding.m1o" keySequence="M1+O" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
+    <bindings xmi:id="_6wlLhcgZEeSyMNYR5xypkQ" elementId="ApsiDiscount.keybinding.m1s" keySequence="M1+S" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
+    <bindings xmi:id="_6wlLiMgZEeSyMNYR5xypkQ" elementId="ApsiDiscount.keybinding.m1a" keySequence="M1+A" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
+  </bindingTables>
+  <rootContext xmi:id="_6wlLecgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_6wlLesgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_6wlLe8gZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_6wlLfMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_6wlLgMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.open" commandName="openCommand"/>
+  <commands xmi:id="_6wlLg8gZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_6wlLhsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <commands xmi:id="_dKfHwJZ6EemYxe644s0ubg" elementId="apsidiscount.command.newarticlecommand" commandName="newArticleCommand"/>
+  <commands xmi:id="_xbI9gJZ6EemYxe644s0ubg" elementId="apsidiscount.command.newcategory" commandName="newCategory"/>
+  <commands xmi:id="_8vMEoJZ6EemYxe644s0ubg" elementId="apsidiscount.command.newmanufacturer" commandName="newManufacturer"/>
+  <addons xmi:id="_6wlLcsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_6wlLc8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_6wlLdMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_6wlLdcgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_6wlLdsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_6wlLd8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_6wlLeMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
