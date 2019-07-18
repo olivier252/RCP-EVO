@@ -6,6 +6,7 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 
 import org.glassfish.jersey.logging.LoggingFeature;
+import org.glassfish.jersey.moxy.json.MoxyJsonFeature;
 
 import apsidiscount.models.Article;
 
@@ -18,7 +19,8 @@ public class HttpClient {
 		client.property(LoggingFeature.LOGGING_FEATURE_LOGGER_LEVEL_CLIENT, "INFO");
 
 
-		List<Article> articles = client.target("http://localhost:8081/apsidiscountweb/api/allarticle").request().get(new ListArticleType());
+		String uri = "http://localhost:8081/apsidiscountweb/api/allarticle";
+		List<Article> articles = client.target(uri).register(new MoxyJsonFeature()).request().get(new ListArticleType());
 		return articles;
 			
 		
@@ -26,14 +28,13 @@ public class HttpClient {
 	
 	 public static void main(String[] args) { 
 		 
-		 	Client client = ClientBuilder.newClient();
-			client.property(LoggingFeature.LOGGING_FEATURE_LOGGER_LEVEL_CLIENT, "INFO");
+	 List<Article> articles =  new HttpClient().getAllArticle();
+	 System.out.println(articles);
+	  
+	  
 
 
-			List<Article> articles = client.target("http://localhost:8081/apsidiscountweb/api/allarticle").request().get(new ListArticleType());
-			for ( Article article : articles) {
-				System.out.println(article.getId());
-			}
+			
 				
 			
 	 }
