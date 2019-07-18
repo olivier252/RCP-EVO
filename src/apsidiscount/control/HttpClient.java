@@ -29,7 +29,7 @@ public class HttpClient {
 	 public static void main(String[] args) { 
 		 
 	 List<Article> articles =  new HttpClient().getAllArticle();
-	 System.out.println(articles);
+	 System.out.println(articles.get(5).getMiseenligne());
 	  
 	  
 

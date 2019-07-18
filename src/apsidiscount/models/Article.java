@@ -100,12 +100,20 @@ public class Article implements Cloneable {
 	public String getName() {
 		return name;
 	}
+	
+	public String getDesignation() {
+		return name;
+	}
 
 	/**
 	 * Set the name of the Article
 	 * @param name the name to set
 	 */
 	public void setName(String name) {
+		pcs.firePropertyChange("name", this.name, this.name = name);
+	}
+	
+	public void setDesignation(String name) {
 		pcs.firePropertyChange("name", this.name, this.name = name);
 	}
 
@@ -132,6 +140,11 @@ public class Article implements Cloneable {
 	public BigDecimal getPrice() {
 		return price;
 	}
+	
+	public BigDecimal getPrix() {
+		return price;
+	}
+	
 
 	/**
 	 * Set the price of the Article
@@ -139,6 +152,10 @@ public class Article implements Cloneable {
 	 */
 	public void setPrice(BigDecimal price) {
 		pcs.firePropertyChange("price", this.price, this.price = price);
+	}
+	
+	public void setPrix(BigDecimal prix) {
+		pcs.firePropertyChange("price", this.price, this.price = prix);
 	}
 
 	/**
@@ -149,7 +166,7 @@ public class Article implements Cloneable {
 		return content;
 	}
 	
-	public String getDesignation() {
+	public String getDescription() {
 		return content;
 	}
 
@@ -161,7 +178,7 @@ public class Article implements Cloneable {
 		pcs.firePropertyChange("content", this.content, this.content = content);
 	}
 	
-	public void setDesignation(String content) {
+	public void setDescription(String content) {
 		pcs.firePropertyChange("content", this.content, this.content = content);
 	}
 
@@ -172,12 +189,20 @@ public class Article implements Cloneable {
 	public Category getCategory() {
 		return category;
 	}
+	
+	public Category getCategorie() {
+		return category;
+	}
 
 	/**
 	 * Set the category of the Article
 	 * @param category the category to set
 	 */
 	public void setCategory(Category category) {
+		pcs.firePropertyChange("category", this.category, this.category = category);
+	}
+	
+	public void setCategorie(Category category) {
 		pcs.firePropertyChange("category", this.category, this.category = category);
 	}
 
@@ -188,6 +213,10 @@ public class Article implements Cloneable {
 	public Manufacturer getManufacturer() {
 		return manufacturer;
 	}
+	
+	public Manufacturer getConstructeur() {
+		return manufacturer;
+	}
 
 	/**
 	 * Set the manufacturer of the Article
@@ -196,12 +225,20 @@ public class Article implements Cloneable {
 	public void setManufacturer(Manufacturer manufacturer) {
 		pcs.firePropertyChange("manufacturer", this.manufacturer, this.manufacturer = manufacturer);
 	}
+	
+	public void setConstructeur(Manufacturer manufacturer) {
+		pcs.firePropertyChange("manufacturer", this.manufacturer, this.manufacturer = manufacturer);
+	}
 
 	/**
 	 * Get the Article published date
 	 * @return the published
 	 */
 	public Date getPublished() {
+		return published;
+	}
+	
+	public Date getMiseenligne() {
 		return published;
 	}
 	
@@ -217,6 +254,10 @@ public class Article implements Cloneable {
 	 * @param published the published to set
 	 */
 	public void setPublished(Date published) {
+		pcs.firePropertyChange("published", this.published, this.published = published);
+	}
+	
+	public void setMiseenligne(Date published) {
 		pcs.firePropertyChange("published", this.published, this.published = published);
 	}
 

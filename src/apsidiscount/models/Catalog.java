@@ -56,7 +56,7 @@ public class Catalog {
 		List<Article> httpArticles = httpClient.getAllArticle();
 		
 		articles.addAll(httpArticles);
-		
+		System.out.println(articles);
 		
 //		articles.add(new Article(
 //			1, "ASUS Ecran Gaming MG248QE", 
