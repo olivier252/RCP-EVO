@@ -18,11 +18,10 @@ public class HttpClient {
 		client.property(LoggingFeature.LOGGING_FEATURE_LOGGER_LEVEL_CLIENT, "INFO");
 
 
-		List<Article> articles = client.target("http://localhost:8081/apsidiscountweb/article/6").request().get(List.class);
-		for(Article article : articles) {
-			System.out.println(article.getId());
-		}
+		List<Article> articles = client.target("http://localhost:8081/apsidiscountweb/api/allarticle").request().get(new ListArticleType());
 		return articles;
+			
+		
 	}
 	
 	 public static void main(String[] args) { 
@@ -31,9 +30,11 @@ public class HttpClient {
 			client.property(LoggingFeature.LOGGING_FEATURE_LOGGER_LEVEL_CLIENT, "INFO");
 
 
-			Article article = client.target("http://localhost:8081/apsidiscountweb/api/article/6").request().get(Article.class);
-			
-				System.out.println(article.getContent());
+			List<Article> articles = client.target("http://localhost:8081/apsidiscountweb/api/allarticle").request().get(new ListArticleType());
+			for ( Article article : articles) {
+				System.out.println(article.getId());
+			}
+				
 			
 	 }
 }
