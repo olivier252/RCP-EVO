@@ -148,12 +148,20 @@ public class Article implements Cloneable {
 	public String getContent() {
 		return content;
 	}
+	
+	public String getDesignation() {
+		return content;
+	}
 
 	/**
 	 * Set the description content of the Article
 	 * @param content the content to set
 	 */
 	public void setContent(String content) {
+		pcs.firePropertyChange("content", this.content, this.content = content);
+	}
+	
+	public void setDesignation(String content) {
 		pcs.firePropertyChange("content", this.content, this.content = content);
 	}
 
