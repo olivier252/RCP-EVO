@@ -6,6 +6,9 @@ import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 public class Article implements Cloneable {
 	private int id;
 	private String name;
@@ -236,10 +239,7 @@ public class Article implements Cloneable {
 	 */
 	public Date getPublished() {
 		return published;
-	}
-	
-	public Date getMiseenligne() {
-		return published;
+		
 	}
 	
 	public String getPublishedString() {
@@ -257,10 +257,16 @@ public class Article implements Cloneable {
 		pcs.firePropertyChange("published", this.published, this.published = published);
 	}
 	
-	public void setMiseenligne(Date published) {
+	public void setDate(Date published) {
 		pcs.firePropertyChange("published", this.published, this.published = published);
 	}
 
+	public Long getMiseEnLigne() {
+		return published == null ? null : published.getTime();
+	}
+	public void setMiseEnLigne(Long miseEnLigne) {
+		this.published = miseEnLigne == null ? null : new Date(miseEnLigne);
+	}
 	/**
 	 * Get the Article stock int
 	 * @return the stock
