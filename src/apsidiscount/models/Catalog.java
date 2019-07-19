@@ -5,9 +5,6 @@ package apsidiscount.models;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
-import java.math.BigDecimal;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.List;
 
 import javax.inject.Singleton;
@@ -94,7 +91,7 @@ public class Catalog {
 		
 		articles.set(index, article);
 		pcs.fireIndexedPropertyChange("articles", index, old, article);
-//		httpClient.
+		httpClient.modifiedArticle(article);
 	}
 	/**
 	 * Get all the manufacturers in the catalog

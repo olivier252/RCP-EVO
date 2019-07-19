@@ -24,7 +24,6 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 
 import apsidiscount.models.Catalog;
-import apsidiscount.models.Category;
 
 public abstract class SearchListPart {
 	@Inject
