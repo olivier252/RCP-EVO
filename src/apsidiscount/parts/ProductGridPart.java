@@ -26,6 +26,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 
+import apsidiscount.control.HttpClient;
 import apsidiscount.dialog.ArticleEditDlg;
 import apsidiscount.models.Article;
 import apsidiscount.models.Catalog;
@@ -86,6 +87,7 @@ public class ProductGridPart {
 	public void postConstruct(Shell shell ,Composite parent,Catalog catalog) {
 		parent.setLayout(new GridLayout(1, false));
 		ArticleEditDlg dlg = new ArticleEditDlg(shell, catalog);
+		HttpClient httpClient = new HttpClient();
 		
 		tableViewer = new CheckboxTableViewer(new Table(
 				parent,
@@ -118,12 +120,12 @@ public class ProductGridPart {
 		tableViewer.addDoubleClickListener(e -> {
 			Article article = (Article) tableViewer.getStructuredSelection().getFirstElement();
 			
-			dlg.setArticle(article.clone());
+			dlg.setArticle(httpClient.getArticleById(article.getId()));
 			
 			if(dlg.open() == IDialogConstants.OK_ID) {
 				int index = catalog.getObservableArticles().indexOf(article);
 				catalog.setArticles(index, dlg.getArticle());
-				tableViewer.refresh();
+
 			}
 			
 		});

@@ -29,10 +29,11 @@ public class Catalog {
 	private WritableList<Manufacturer> manufacturers=	new WritableList<>();
 	private WritableList<Category> 	categories=		new WritableList<>();
 	private PropertyChangeSupport pcs = new PropertyChangeSupport(this);
-
+	private HttpClient httpClient =  new HttpClient();
+	
 	public Catalog() {
 		
-		HttpClient httpClient =  new HttpClient();
+		
 		List<Article> httpArticles = httpClient.getAllArticle();
 //		List<Category>httpCat = 
 		
@@ -93,6 +94,7 @@ public class Catalog {
 		
 		articles.set(index, article);
 		pcs.fireIndexedPropertyChange("articles", index, old, article);
+//		httpClient.
 	}
 	/**
 	 * Get all the manufacturers in the catalog

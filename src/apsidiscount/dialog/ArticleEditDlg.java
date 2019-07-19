@@ -26,6 +26,7 @@ import org.eclipse.core.databinding.beans.BeanProperties;
 import org.eclipse.jface.databinding.viewers.ViewerProperties;
 
 public class ArticleEditDlg extends Dialog {
+	
 	private DataBindingContext m_bindingContext;
 
 

@@ -7,7 +7,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 
 public class Article implements Cloneable {
 	private int id;
@@ -100,6 +102,7 @@ public class Article implements Cloneable {
 	 * Get the Article name
 	 * @return the name
 	 */
+	@XmlTransient
 	public String getName() {
 		return name;
 	}
@@ -140,6 +143,7 @@ public class Article implements Cloneable {
 	 * Get the Article price
 	 * @return the price
 	 */
+	@XmlTransient
 	public BigDecimal getPrice() {
 		return price;
 	}
@@ -165,6 +169,7 @@ public class Article implements Cloneable {
 	 * Get the Article description content
 	 * @return the content
 	 */
+	@XmlTransient
 	public String getContent() {
 		return content;
 	}
@@ -189,6 +194,7 @@ public class Article implements Cloneable {
 	 * Get the Article Category
 	 * @return the category
 	 */
+	@XmlTransient
 	public Category getCategory() {
 		return category;
 	}
@@ -213,6 +219,7 @@ public class Article implements Cloneable {
 	 * Get the Article manufacturer
 	 * @return the manufacturer
 	 */
+	@XmlTransient
 	public Manufacturer getManufacturer() {
 		return manufacturer;
 	}
@@ -237,6 +244,7 @@ public class Article implements Cloneable {
 	 * Get the Article published date
 	 * @return the published
 	 */
+	@XmlTransient
 	public Date getPublished() {
 		return published;
 		
