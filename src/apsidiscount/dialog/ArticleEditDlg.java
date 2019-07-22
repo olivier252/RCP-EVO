@@ -148,7 +148,7 @@ public class ArticleEditDlg extends Dialog {
 		
 		ViewerSupport.bind(cmbViewerCat		,catalog.getObservableCategory() 	, BeanProperties.value("name"));
 		ViewerSupport.bind(cmbViewerMan		,catalog.getObservableManufacturer(), BeanProperties.value("name"));
-
+		
 		return container;
 	}
 

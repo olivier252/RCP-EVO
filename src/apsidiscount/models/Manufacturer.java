@@ -58,12 +58,28 @@ public class Manufacturer {
 	public String getName() {
 		return name;
 	}
+	
+	public String getNom() {
+		return name;
+	}
 	/**
 	 * set the manufacturer name
 	 * @param name the name to set
 	 */
 	public void setName(String name) {
 		pcs.firePropertyChange("name", this.name, this.name = name);
+	}
+	
+	public void setNom(String name) {
+		pcs.firePropertyChange("name", this.name, this.name = name);
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(o instanceof Manufacturer) {
+			return this.id == ((Manufacturer) o).id;
+		}
+		return false;
 	}
 
 	

@@ -30,10 +30,12 @@ public class Catalog {
 	
 	public Catalog() {
 		
+		List<Manufacturer> httpMan = httpClient.getAllManufacturer();
+		List<Category> httpCat = httpClient.getAllCategory();
+		List<Article> httpArticles = httpClient.getAllArticle(); 
 		
-		List<Article> httpArticles = httpClient.getAllArticle();
-//		List<Category>httpCat = 
-		
+		manufacturers.addAll(httpMan);
+		categories.addAll(httpCat);
 		articles.addAll(httpArticles);
 		
 		

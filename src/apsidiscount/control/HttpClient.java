@@ -22,6 +22,8 @@ public class HttpClient {
 	private final static String uriCat = "http://localhost:8081/apsidiscountweb/api/allcategory";
 	private final static String uriMan = "http://localhost:8081/apsidiscountweb/api/allmanufacturer";
 	private final static String uriOneArt = "http://localhost:8081/apsidiscountweb/api/article/{id}";
+	private final static String uriArtbyCat = "http://localhost:8081/apsidiscountweb/api/categorie/{id}/article";
+	private final static String uriArtbyMan = "http://localhost:8081/apsidiscountweb/api/manufacturer/{id}/article";
 	
 	private WebTarget createWebTarget(String uri) {
 		
@@ -73,6 +75,22 @@ public class HttpClient {
 		
 	}
 	
+	public List<Article> getArticlebyCat(Long id) {
+		
+		WebTarget register = createWebTarget(uriArtbyCat);
+		List<Article> articles = register.resolveTemplate("id", id).request().get(new ListArticleType());
+		return articles;
+		
+	}
+	
+	public List<Article> getArticlebyMan(Long id) {
+		
+		WebTarget register = createWebTarget(uriArtbyMan);
+		List<Article> articles = register.resolveTemplate("id", id).request().get(new ListArticleType());
+		return articles;
+		
+	}
+	
 
 //	public static void main(String[] args) {
 //
@@ -84,8 +102,6 @@ public class HttpClient {
 	public static void main(String[] args) {
 		HttpClient hc = new HttpClient();
 		Article a =  hc.getArticleById(5);
-		a.setDescription("hjkbhvjvb");
-		hc.modifiedArticle(a);
 		System.out.println(a.getDescription());
 
 	}

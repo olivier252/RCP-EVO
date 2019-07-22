@@ -59,6 +59,10 @@ public class Category {
 	public String getName() {
 		return name;
 	}
+	
+	public String getNom() {
+		return name;
+	}
 
 	/**
 	 * Set the category name
@@ -66,6 +70,18 @@ public class Category {
 	 */
 	public void setName(String name) {
 		pcs.firePropertyChange("name", this.name,this.name = name);
+	}
+	
+	public void setNom(String name) {
+		pcs.firePropertyChange("name", this.name,this.name = name);
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(o instanceof Category) {
+			return this.id == ((Category) o).id;
+		}
+		return false;
 	}
 
 

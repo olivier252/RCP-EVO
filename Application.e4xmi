@@ -9,7 +9,7 @@
       <children xsi:type="basic:PartSashContainer" xmi:id="_qg1-0JKeEem7Ip_w-rJ9Qg" elementId="apsidiscount.partsashcontainer.0" containerData="80" selectedElement="_Bg49kJKgEem7Ip_w-rJ9Qg">
         <children xsi:type="basic:PartStack" xmi:id="_Bg49kJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.partstack.main" selectedElement="_Cc89MJKgEem7Ip_w-rJ9Qg">
           <children xsi:type="basic:Part" xmi:id="_CJSaUJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.part.home" contributionURI="bundleclass://ApsiDiscount/apsidiscount.parts.HomePart" label="Home"/>
-          <children xsi:type="basic:Part" xmi:id="_Cc89MJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.part.allproducts" contributionURI="bundleclass://ApsiDiscount/apsidiscount.parts.ProductGridPart" label="All products" closeable="true"/>
+          <children xsi:type="basic:Part" xmi:id="_Cc89MJKgEem7Ip_w-rJ9Qg" elementId="apsidiscount.part.allproducts" contributionURI="bundleclass://ApsiDiscount/apsidiscount.parts.ProductGridPart" label="All products"/>
         </children>
       </children>
       <children xsi:type="basic:Part" xmi:id="_I3t2oJKfEem7Ip_w-rJ9Qg" elementId="apsidiscount.part.alertes" containerData="20" contributionURI="bundleclass://ApsiDiscount/apsidiscount.parts.AlertsPart" label="Alertes" closeable="true"/>
